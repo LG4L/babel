@@ -24,7 +24,7 @@ public:
     void setGender(std::string gender);
     void setExamplary(int examplary);
     void setIssueDate(int issueDate);
-    std::string getTitle();
+    std::string getTitle() const;
     std::string getAuthor();
     std::string getGender();
     int getExamplary();

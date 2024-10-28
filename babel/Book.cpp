@@ -26,7 +26,7 @@ void Book::setIssueDate(int issueDate)
     this->issueDate = issueDate;
 }
 
-std::string Book::getTitle()
+std::string Book::getTitle() const
 {
     return this->title;
 }

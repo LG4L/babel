@@ -44,7 +44,7 @@ bool Library::borrowBook(std::string userId, std::string bookTitle)
 bool Library::returnBook(const std::string& userId, const std::string& bookTitle) {
     User& user = mUser[userId];
     Book& book = books[bookTitle];
-    auto& borrowedBooks = emprunt[user];
+    auto& borrowedBooks = emprunt[userId];
     auto it = std::find_if(borrowedBooks.begin(), borrowedBooks.end(),
         [&bookTitle](const Book& b) { return b.getTitle() == bookTitle; });
 

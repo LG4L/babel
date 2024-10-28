@@ -8,12 +8,11 @@
 
 class Library {
 private:
-    std::map<std::string, User> mUser;
-    std::map<User, std::vector<Book> >emprunt;
     std::map<std::string, Book> books;
+    std::map<std::string, User> mUser;
+    std::map<User, std::vector<Book>> emprunt;
 
     Library();
-    ~Library();  // destructor
     static Library* instance;
 
 public:

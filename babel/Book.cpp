@@ -53,11 +53,11 @@ int Book::getIssueDate()
 // Méthode qui retourne un objet JSON
 Json::Value Book::toJson() const {
     Json::Value bookJson;
-    bookJson["Title"] = title;       // Titre dans le JSON
-    bookJson["Author"] = author;     // Auteur dans le JSON
+    bookJson["Title"] = title;          // Titre dans le JSON
+    bookJson["Author"] = author;        // Auteur dans le JSON
     bookJson["Gender"] = gender;
     bookJson["Examplary"] = examplary;
-    bookJson["IssueDate"] = issueDate; // Date de publication dans le JSON
+    bookJson["IssueDate"] = issueDate;  // Date de publication dans le JSON
     
     return bookJson;
 }

@@ -5,18 +5,12 @@ Library::Library() {
     std::cout << "Singleton instance created" << std::endl;
 }
 
-Library::~Library() {
-    std::cout << "Singleton instance destroyed" << std::endl;
-}
-
 Library& Library::getInstance() {
 
     static Library instance;
 
     return instance;
 }
-
-
 
 void Library::someOperation() {
     std::cout << "Singleton is performing an operation" << std::endl;

@@ -1,5 +1,7 @@
-#include <iostream>
 #include "Library.h"
+
+#include <iostream>
+
 
 Library::Library() {
     std::cout << "Singleton instance created" << std::endl;

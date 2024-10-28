@@ -1,9 +1,10 @@
-#ifndef USERS_H
-#define USERS_H
+#ifndef USER_H
+#define USER_H
 
 #include <iostream>
 #include <string>
-//#include "library.h"
+
+#include "Book.h"
 
 class User {
 private:

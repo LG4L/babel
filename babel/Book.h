@@ -1,3 +1,6 @@
+#ifndef BOOK_H
+#define BOOK_H
+
 #include <iostream>
 #include <json/json.h>
 #include <fstream>
@@ -28,6 +31,9 @@ public:
     int getIssueDate();
     Json::Value toJson() const;
 };
+
+#endif
+
 
 //int main() {
 //    // Crée un objet Livre (book)

@@ -1,14 +1,15 @@
 #ifndef LIBRARY_H
 #define LIBRARY_H
 
-#include <map>
 #include "User.h"
 #include "Book.h"
+
+#include <map>
 #include <vector>
 
 class Library {
 private:
-    std::map<std::string, Book> books;
+    std::map<std::string, Book> books; 
     std::map<std::string, User> mUser;
     std::map<User, std::vector<Book>> emprunt;
 

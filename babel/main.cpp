@@ -3,9 +3,8 @@
 #include "User.h"
 
 int main() {
-    Library& singleton = Library::getInstance();
-
-    singleton.someOperation();
+    
+    Library::getInstance().someOperation();
 
     User user("matthieu", "80 rue des penis", "095404949", "U123");
 

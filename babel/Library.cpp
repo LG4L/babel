@@ -1,8 +1,6 @@
 #include <iostream>
 #include "Library.h"
 
-Library* Library::instance = nullptr;
-
 Library::Library() {
     std::cout << "Singleton instance created" << std::endl;
 }
@@ -12,10 +10,10 @@ Library::~Library() {
 }
 
 Library& Library::getInstance() {
-    if (!instance) {
-        instance = new Library();
-    }
-    return *instance;
+
+    static Library instance;
+
+    return instance;
 }
 
 

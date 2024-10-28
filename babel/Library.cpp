@@ -12,6 +12,7 @@ Library& Library::getInstance()
 {
 
     static Library instance;
+
     return instance;
 }
 
@@ -20,29 +21,42 @@ void Library::someOperation()
     std::cout << "Singleton is performing an operation" << std::endl;
 }
 
-void Library::Addbook(Book book)
+void Library::addBook(Book book)
 {
     std::string bookid = book.getId();
-    if (books.find(bookid) == books.end())
+    if (this->books.find(bookid) == this->books.end())
     {
-        books[bookid] = book;
+        this->books[bookid] = book;
     }
     else
     {
-        books[bookid].addExamplary();
+        this->books[bookid].addExamplary();
     }
 }
 
-//void Library::addUser(int id, const User& user) {
-//    mUser[id] = user;
-//    std::cout << "User added with this id : " << id << std::endl;
-//}
-//
-//User Library::getUsezr(int id) {
-//    if (mUser.find(id) != mUsers.end() {
-//        return mUser[id];
-//    }
-//    else {
-//
-//    }
-//}
+bool Library::borrowBook(std::string userId, std::string bookTitle)
+{
+    Book book = books[bookTitle];
+    emprunt[userId].push_back(book);
+    std::cout << "Le livre " << bookTitle << " a ete emprunté par " << userId << std::endl;
+}
+
+bool Library::returnBook(const std::string& userId, const std::string& bookTitle) {
+    User& user = mUser[userId];
+    Book& book = books[bookTitle];
+    auto& borrowedBooks = emprunt[user];
+    auto it = std::find_if(borrowedBooks.begin(), borrowedBooks.end(),
+        [&bookTitle](const Book& b) { return b.getTitle() == bookTitle; });
+
+
+    if (it != borrowedBooks.end()) {
+        borrowedBooks.erase(it);
+        book.setExamplary(book.getExamplary() + 1);
+        std::cout << "Le livre " << bookTitle << " a ete retourné par " << userId << std::endl;
+        return true;
+    }
+    else {
+        std::cout << "L'utilisateur n'a pas emprunté ce livre" << std::endl;
+        return false;
+    }
+}

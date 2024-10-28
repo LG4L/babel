@@ -6,7 +6,6 @@
 
 #include <map>
 #include <vector>
-#include "Book.h"
 
 class Library {
 private:
@@ -20,11 +19,13 @@ private:
 public:
     static Library& getInstance();
     void someOperation();
-    void Addbook(Book book);
-
+    void addBook(Book book);
 
     Library(const Library&) = delete;
     Library& operator=(const Library&) = delete;
+    
+    bool borrowBook(std::string userId, std::string bookTitle);
+    bool returnBook(const std::string& userId, const std::string& bookTitle);
 };
 
 #endif

@@ -30,6 +30,13 @@ public:
     int getExamplary();
     int getIssueDate();
     Json::Value toJson() const;
+    std::string addBook(Book b);
+
+
+    std::string getId();
+    std::string toString();
+
+    void addExamplary();
 };
 
 #endif

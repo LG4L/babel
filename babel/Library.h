@@ -6,12 +6,13 @@
 
 #include <map>
 #include <vector>
+#include "Book.h"
 
 class Library {
 private:
-    std::map<std::string, Book> books; 
+    std::map<std::string, Book> books;
     std::map<std::string, User> mUser;
-    std::map<User, std::vector<Book>> emprunt;
+    std::map<std::string, std::vector<Book>> emprunt; // string represente l'identifiant utilisateur
 
     Library();
     static Library* instance;
@@ -19,6 +20,7 @@ private:
 public:
     static Library& getInstance();
     void someOperation();
+    void Addbook(Book book);
 
 
     Library(const Library&) = delete;

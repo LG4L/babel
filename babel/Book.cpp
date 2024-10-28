@@ -50,6 +50,42 @@ int Book::getIssueDate()
     return this->issueDate;
 };
 
+// function to add book
+std::string Book::addBook(Book b)
+{
+    return std::string();
+}
+
+std::string Book::getId()
+{
+    std::string result = 
+        this->title + ", " + 
+        this->author + ", " + 
+        this->gender + ", " + 
+        std::to_string(this->issueDate);
+
+    return result;
+}
+
+std::string Book::toString()
+{
+    std::string result = 
+        this->title + ", " + 
+        this->author + ", " + 
+        this->gender + ", " + 
+        std::to_string(this->issueDate) + ", " + 
+        std::to_string(this->examplary);
+
+    return result;
+}
+
+void Book::addExamplary()
+{
+    this->examplary += 1;
+}
+
+
+
 // Méthode qui retourne un objet JSON
 Json::Value Book::toJson() const {
     Json::Value bookJson;

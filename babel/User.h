@@ -14,7 +14,6 @@ private:
     std::string idUser;
 
 public:
-
     User(const std::string& initialName, const std::string& initialAddr, const std::string& initialPhone, const std::string& initialId) {
 
         this->name = initialName;
@@ -24,21 +23,13 @@ public:
     }
 
     void setName(const std::string& name);
-
     void setAddr(const std::string& addr);
-
     void setPhone(const std::string& phone);
-
     void setUserId(const std::string& idUser);
-
     std::string getName();
-
     std::string getAddr();
-
     std::string getPhone();
-
     std::string getId();
-
 };
 
 #endif

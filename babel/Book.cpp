@@ -1,6 +1,5 @@
 #include "Book.h"
 
-
 void Book::setTitle(std::string title)
 {
     this->title = title;
@@ -63,7 +62,7 @@ std::string Book::getId()
         this->author + ", " + 
         this->gender + ", " + 
         std::to_string(this->issueDate);
-
+    
     return result;
 }
 
@@ -75,7 +74,7 @@ std::string Book::toString()
         this->gender + ", " + 
         std::to_string(this->issueDate) + ", " + 
         std::to_string(this->examplary);
-
+    
     return result;
 }
 
@@ -86,7 +85,7 @@ void Book::addExamplary()
 
 
 
-// Méthode qui retourne un objet JSON
+// MÃ©thode qui retourne un objet JSON
 Json::Value Book::toJson() const {
     Json::Value bookJson;
     bookJson["Title"] = title;          // Titre dans le JSON

@@ -8,7 +8,7 @@
 
 class Book {
 private:
-    std::string title;  // Nommage correct pour les membres privés
+    std::string title;  // Nommage correct pour les membres privÃ©s
     std::string author;
     std::string gender;
     int examplary;
@@ -31,11 +31,8 @@ public:
     int getIssueDate();
     Json::Value toJson() const;
     std::string addBook(Book b);
-
-
     std::string getId();
     std::string toString();
-
     void addExamplary();
 };
 
@@ -43,13 +40,13 @@ public:
 
 
 //int main() {
-//    // Crée un objet Livre (book)
-//    Book book1("Le Petit Prince", "Antoine de Saint-Exupéry", "only2:moyai:", 1943, 3);
+//    // CrÃ©e un objet Livre (book)
+//    Book book1("Le Petit Prince", "Antoine de Saint-ExupÃ©ry", "only2:moyai:", 1943, 3);
 //
 //    // Conversion de l'objet Livre(book) en JSON
 //    Json::Value jsonOutput = book1.toJson();
 //
-//    // Affiche le JSON formaté
+//    // Affiche le JSON formatÃ©
 //    std::cout << jsonOutput.toStyledString() << std::endl;
 //
 //

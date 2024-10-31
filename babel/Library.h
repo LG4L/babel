@@ -8,8 +8,7 @@
 #include <vector>
 #include "Book.h"
 
-class Library
-{
+class Library {
 private:
     std::map<std::string, Book> books;
     std::map<std::string, User> mUser;

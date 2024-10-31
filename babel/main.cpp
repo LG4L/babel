@@ -16,3 +16,8 @@ int main() {
 
     return 0;
 }
+// std::string Book::toString() {
+//    return "Titre: " + title + ",
+//    Auteur: " + author + ", Genre: " + gender + ",
+//    Publication: " + std::to_string(issueDate) + ",
+//    Exemplaires: " + std::to_string(examplary);

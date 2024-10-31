@@ -1,5 +1,4 @@
 #include "Library.h"
-
 #include <iostream>
 
 
@@ -10,7 +9,6 @@ Library::Library()
 
 Library& Library::getInstance()
 {
-
     static Library instance;
     return instance;
 }
@@ -26,6 +24,7 @@ void Library::Addbook(Book book)
     if (books.find(bookid) == books.end())
     {
         books[bookid] = book;
+    
     }
     else
     {

@@ -32,6 +32,6 @@ int interface::addBook()
         std::cerr << "entre invalid" << std::endl;
     }
     Book c(title, author, gender, examplary, issuedate);
-    Library::getInstance().Addbook(c);
+    Library::getInstance().addBook(c);
     return 0;
 }

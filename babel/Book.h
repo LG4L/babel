@@ -35,7 +35,6 @@ public:
     std::string toString();
     void addExamplary();
 };
-
 #endif
 
 

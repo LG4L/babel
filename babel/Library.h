@@ -7,11 +7,13 @@
 #include <map>
 #include <vector>
 
+typedef std::string id;
+
 class Library {
 private:
-    std::map<std::string, Book> books;
-    std::map<std::string, User> mUser;
-    std::map<std::string, std::vector<Book>> emprunt; // string represente l'identifiant utilisateur
+    std::map<id, Book> books;
+    std::map<id, User> mUser;
+    std::map<id, std::vector<Book>> emprunt; // string represente l'identifiant utilisateur
 
     Library();
     static Library* instance;
@@ -19,13 +21,13 @@ private:
 public:
 
 
-    // le int représente le code de retour du code
+    // le int reprÃ©sente le code de retour du code
     // exemple : 0 = tout vas bien; 1 = erreur...
 
-    int addBook(Book b);
     static Library& getInstance();
     void someOperation();
-    void Addbook(Book book);
+    void addBook(Book book);
+    bool bookExist(Book b);
 
 
     Library(const Library&) = delete;

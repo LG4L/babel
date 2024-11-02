@@ -18,13 +18,12 @@ void Library::someOperation()
     std::cout << "Singleton is performing an operation" << std::endl;
 }
 
-void Library::Addbook(Book book)
+void Library::addBook(Book book)
 {
     std::string bookid = book.getId();
     if (books.find(bookid) == books.end())
     {
         books[bookid] = book;
-    
     }
     else
     {
@@ -32,26 +31,10 @@ void Library::Addbook(Book book)
     }
 }
 
-int Library::addBook(Book b)
-{
-    // vérifier que le livre existe deja ou non
-    // si il existe deja, ajouter un exemplaire
-    std::string id;
-    books[id] = b;
-
-    return 0;
+bool Library::bookExist(Book b) {
+    id id_book = b.getId();
+    if (books.find(id_book) == books.end()) {
+        return false;
+    }
+    return true;
 }
-
-//void Library::addUser(int id, const User& user) {
-//    mUser[id] = user;
-//    std::cout << "User added with this id : " << id << std::endl;
-//}
-//
-//User Library::getUsezr(int id) {
-//    if (mUser.find(id) != mUsers.end() {
-//        return mUser[id];
-//    }
-//    else {
-//
-//    }
-//}

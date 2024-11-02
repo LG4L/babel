@@ -6,8 +6,10 @@
 
 namespace interface
 {
+	extern void getAllBook();
 	extern int addBook();
 	extern void deleteBook();
+
 };
 
 #endif // !INTERFACE_H

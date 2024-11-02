@@ -2,20 +2,12 @@
 
 #include <iostream>
 
-Library::Library()
-{
-    std::cout << "Singleton instance created" << std::endl;
-}
+Library::Library(){}
 
 Library& Library::getInstance()
 {
     static Library instance;
     return instance;
-}
-
-void Library::someOperation()
-{
-    std::cout << "Singleton is performing an operation" << std::endl;
 }
 
 void Library::addBook(Book book)
@@ -48,6 +40,17 @@ bool Library::deleteBook(id bookId)
         return true;
     }
     return false;
+}
+
+std::vector<Book> Library::getAllBook()
+{
+    std::vector<Book> allBooks;
+    for (auto book : books)
+    {
+        allBooks.push_back(book.second);
+    }
+
+    return allBooks;
 }
 
 bool Library::bookExist(Book b)

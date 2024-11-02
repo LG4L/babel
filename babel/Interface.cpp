@@ -2,6 +2,17 @@
 #include "Book.h"
 #include "Library.h"
 
+void interface::getAllBook() {
+    std::vector<Book> liste_livre = Library::getInstance().getAllBook();
+
+    for(auto& livre : liste_livre) {
+        std::cout << livre.toString() << std::endl;
+        std::cout << livre.getId() << std::endl;
+    }
+    return;
+}
+
+
 int interface::addBook()
 {
     std::string title;
@@ -38,7 +49,6 @@ int interface::addBook()
 void interface::deleteBook()
 {
     std::string deleteby;
-
     std::cout << "veux tu supprimé un livre par son id ou autre";
     std::getline(std::cin, deleteby);
     
@@ -69,7 +79,6 @@ void interface::deleteBook()
         std::cout << "la date de sortie: ";
         std::getline(std::cin, issuedatetemp);
 
-        
         try
         {
             issuedate = std::stoi(issuedatetemp);

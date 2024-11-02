@@ -17,7 +17,7 @@
  	std::cout << "5. Retourner un livre" << std::endl;
  	std::cout << "6. Quitter" << std::endl;
  	std::cin >> choix;
-    std::cin.ignore();
+  std::cin.ignore();
 
  	switch (choix)
     {

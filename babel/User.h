@@ -14,6 +14,7 @@ private:
     std::string idUser;
 
 public:
+    User() = default;
     User(const std::string& initialName, const std::string& initialAddr, const std::string& initialPhone, const std::string& initialId) {
 
         this->name = initialName;

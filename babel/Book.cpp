@@ -1,5 +1,7 @@
 #include "Book.h"
 
+#include <iostream>
+
 void Book::setTitle(std::string title)
 {
     this->title = title;
@@ -48,12 +50,6 @@ int Book::getIssueDate()
 {
     return this->issueDate;
 };
-
-// function to add book
-std::string Book::addBook(Book b)
-{
-    return std::string();
-}
 
 std::string Book::getId()
 {

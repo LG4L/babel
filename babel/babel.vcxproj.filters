@@ -24,6 +24,9 @@
     <ClInclude Include="Library.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="interface.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

@@ -1,6 +1,6 @@
 #include "Library.h"
-#include <iostream>
 
+#include <iostream>
 
 Library::Library()
 {
@@ -30,6 +30,16 @@ void Library::Addbook(Book book)
     {
         books[bookid].addExamplary();
     }
+}
+
+int Library::addBook(Book b)
+{
+    // vérifier que le livre existe deja ou non
+    // si il existe deja, ajouter un exemplaire
+    std::string id;
+    books[id] = b;
+
+    return 0;
 }
 
 //void Library::addUser(int id, const User& user) {

@@ -15,6 +15,7 @@ private:
     int issueDate;
 
 public:
+    Book() = default;
     // Constructeur avec liste d'initialisation
     Book(const std::string& title, const std::string& author, std::string gender, int examplary, int issueDate)
         : title(title), author(author), gender(gender), examplary(examplary), issueDate(issueDate) {}
@@ -30,7 +31,6 @@ public:
     int getExamplary();
     int getIssueDate();
     Json::Value toJson() const;
-    std::string addBook(Book b);
     std::string getId();
     std::string toString();
     void addExamplary();

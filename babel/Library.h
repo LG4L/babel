@@ -6,7 +6,6 @@
 
 #include <map>
 #include <vector>
-#include "Book.h"
 
 class Library {
 private:
@@ -18,6 +17,12 @@ private:
     static Library* instance;
 
 public:
+
+
+    // le int représente le code de retour du code
+    // exemple : 0 = tout vas bien; 1 = erreur...
+
+    int addBook(Book b);
     static Library& getInstance();
     void someOperation();
     void Addbook(Book book);

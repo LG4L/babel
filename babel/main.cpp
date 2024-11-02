@@ -8,6 +8,9 @@
 
  void main()
  {
+     Book livre1("Le Petit Prince", "Antoine de Saint-Exupéry", 1943);
+     Book livre2("les troas mousketer", "Saint josé", 1965);
+
  	int choix;
  	std::cout << "Bienvenue dans la bibliothèque digital" << std::endl;
  	std::cout << "1. Ajouter un livre" << std::endl;
@@ -26,6 +29,7 @@
  	    break;
  	case 2:
  	    std::cout << "selectionné le livre a supprimer" << std::endl;
+        interface::deleteBook();
  	    break;
  	case 3:
  	    std::cout << "Ajouter un livre selectionner" << std::endl;

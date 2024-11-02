@@ -6,17 +6,17 @@
 
 #include "Book.h"
 
-class User {
+class User
+{
 private:
     std::string name;
     std::string addr;
     std::string phone;
     std::string idUser;
-
 public:
     User() = default;
-    User(const std::string& initialName, const std::string& initialAddr, const std::string& initialPhone, const std::string& initialId) {
-
+    User(const std::string& initialName, const std::string& initialAddr, const std::string& initialPhone, const std::string& initialId)
+    {
         this->name = initialName;
         this->addr = initialAddr;
         this->phone = initialPhone;

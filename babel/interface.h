@@ -4,9 +4,10 @@
 #include "Library.h"
 #include "Book.h"
 
-namespace interface {
+namespace interface
+{
 	extern int addBook();
-	
+	extern void deleteBook();
 };
 
 #endif // !INTERFACE_H

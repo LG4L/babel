@@ -20,20 +20,41 @@ void Library::someOperation()
 
 void Library::addBook(Book book)
 {
-    std::string bookid = book.getId();
-    if (books.find(bookid) == books.end())
+    std::string bookId = book.getId();
+    if (books.find(bookId) == books.end())
     {
-        books[bookid] = book;
+        books[bookId] = book;
     }
     else
     {
-        books[bookid].addExamplary();
+        books[bookId].addExamplary();
     }
 }
+bool Library::deleteBook(Book book)
+{
+    std::string bookId = book.getId();
+    if (books.find(bookId) != books.end())
+    {
+        books.erase(bookId);
+        return true;
+    }
+    return false;
+}
+bool Library::deleteBook(id bookId)
+{
+    if (books.find(bookId) != books.end())
+    {
+        books.erase(bookId);
+        return true;
+    }
+    return false;
+}
 
-bool Library::bookExist(Book b) {
-    id id_book = b.getId();
-    if (books.find(id_book) == books.end()) {
+bool Library::bookExist(Book b)
+{
+    id bookId = b.getId();
+    if (books.find(bookId) == books.end())
+    {
         return false;
     }
     return true;

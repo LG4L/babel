@@ -28,7 +28,8 @@ public:
     void someOperation();
     void addBook(Book book);
     bool bookExist(Book b);
-
+    bool deleteBook(Book book);
+    bool deleteBook(id bookId);
 
     Library(const Library&) = delete;
     Library& operator=(const Library&) = delete;

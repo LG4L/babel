@@ -38,30 +38,3 @@ public:
 #endif
 
 
-//int main() {
-//    // Crée un objet Livre (book)
-//    Book book1("Le Petit Prince", "Antoine de Saint-Exupéry", "only2:moyai:", 1943, 3);
-//
-//    // Conversion de l'objet Livre(book) en JSON
-//    Json::Value jsonOutput = book1.toJson();
-//
-//    // Affiche le JSON formaté
-//    std::cout << jsonOutput.toStyledString() << std::endl;
-//
-//
-//
-//
-//
-//    std::ofstream file_id;
-//    file_id.open("file.txt");
-//
-//
-//
-//    Json::StyledWriter styledWriter;
-//    file_id << styledWriter.write(jsonOutput);
-//
-//    file_id.close();
-//
-//
-//    return 0;
-//}

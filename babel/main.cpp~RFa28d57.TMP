@@ -18,7 +18,6 @@ void main()
     while(true) {
         std::string choix_str;
         std::cout << "Bienvenue dans la bibliothèque digital" << std::endl;
-        std::cout << "veuiller entré un numero corespondant a ce que vou voullez faire" << std::endl;
         std::cout << "0. Afficher tout les livres" << std::endl;
         std::cout << "1. Ajouter un livre" << std::endl;
         std::cout << "2. Supprimer un livre" << std::endl;

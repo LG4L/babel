@@ -13,12 +13,15 @@ private:
     std::string gender;
     int examplary;
     int issueDate;
+    bool isAvailable = true; // peu etre en public ?
 
 public:
     Book() = default;
     // Constructeur avec liste d'initialisation
     Book(const std::string& title, const std::string& author, std::string gender, int examplary, int issueDate)
         : title(title), author(author), gender(gender), examplary(examplary), issueDate(issueDate) {}
+
+
 
     void setTitle(std::string title);
     void setAuthor(std::string author);
@@ -34,7 +37,14 @@ public:
     std::string getId();
     std::string toString();
     void addExamplary();
+
+    void setAvailability(bool status)
+    {
+        isAvailable = status;
+    }
+    bool getAvailability() //gpt me dit de le mettre en const ( a voir plus tard )
+    {
+        return isAvailable;
+    }
 };
 #endif
-
-

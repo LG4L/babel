@@ -12,7 +12,6 @@ void interface::getAllBook() {
     return;
 }
 
-
 int interface::addBook()
 {
     std::string title;

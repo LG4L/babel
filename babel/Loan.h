@@ -21,14 +21,16 @@ public:
 //#include <ctime>
 //
 //
-//std::string getCurrentDate() {
+//std::string getCurrentDate()
+// {
 //    std::time_t now = std::time(nullptr);
 //    return std::ctime(&now); // Renvoie la date actuel en string
 //}
 
 
 
-//std::string calculateDueDate(int daysToAdd = 14) {
+//std::string calculateDueDate(int daysToAdd = 14)
+// {
 //    std::time_t now = std::time(nullptr);
 //    std::time_t dueTime = now + (daysToAdd * 24 * 60 * 60);
 //    return std::ctime(&dueTime); // Renvoie la date de retour prévue

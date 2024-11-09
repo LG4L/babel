@@ -4,30 +4,34 @@
 #include "Interface.h"
 
 #include <iostream>
+#include <string>
 
-
-void main()
+int main()
 {
-    Book livre1 = Book("Le Petit Prince", "Antoine de Saint-Exupery", "action", 0, 1943);
-    Book livre2 = Book("les trois mousketer", "Saint jose", "action", 0, 1965);
+    // Initialisation des livres
+    Book livre1("Le Petit Prince", "Antoine de Saint-Exupery", "action", 0, 1943);
+    Book livre2("Les Trois Mousquetaires", "Alexandre Dumas", "action", 0, 1965);
 
     Library::getInstance().addBook(livre1);
     Library::getInstance().addBook(livre2);
 
+    // Boucle principale du programme
+    while (true)
+    {
 
-    while(true) {
         std::string choix_str;
-        std::cout << "Bienvenue dans la bibliothèque digital" << std::endl;
-        std::cout << "veuiller entré un numero corespondant a ce que vou voullez faire" << std::endl;
-        std::cout << "0. Afficher tout les livres" << std::endl;
+        std::cout << "Bienvenue dans la bibliotheque digitale" << std::endl;
+        std::cout << "Veuillez entrer un numero correspondant a une fonction" << std::endl;
+        std::cout << "0. Afficher tous les livres" << std::endl;
         std::cout << "1. Ajouter un livre" << std::endl;
         std::cout << "2. Supprimer un livre" << std::endl;
         std::cout << "3. Rechercher un livre" << std::endl;
         std::cout << "4. Emprunter un livre" << std::endl;
         std::cout << "5. Retourner un livre" << std::endl;
         std::cout << "6. Quitter" << std::endl;
+
         std::getline(std::cin, choix_str);
-        
+
         int choix;
         try
         {
@@ -35,39 +39,42 @@ void main()
         }
         catch (const std::invalid_argument& e)
         {
-            std::cerr << "entree invalid, veuillez spécifier un numéro" << std::endl;
-			continue;
+            std::cerr << "Entree invalide, veuillez specifier un numero." << std::endl;
+            continue;
         }
-        if(choix > 6 || choix < 0)
-        {
-			std::cout << "entree invalid, veuillez spécifier un numéro valide" << std::endl;
-			continue;
-		}
 
- 	    switch (choix)
+        if (choix < 0 || choix > 6)
         {
+            std::cout << "Entree invalide, veuillez specifier un numero valide." << std::endl;
+            continue;
+        }
+
+        switch (choix) {
         case 0:
             interface::getAllBook();
             break;
- 	    case 1:
+        case 1:
             interface::addBook();
- 	        break;
- 	    case 2:
- 	        std::cout << "selectionné le livre a supprimer" << std::endl;
+            break;
+        case 2:
+            std::cout << "Selectionnez le livre a supprimer." << std::endl;
             interface::deleteBook();
- 	        break;
- 	    case 3:
- 	        std::cout << "Ajouter un livre selectionner" << std::endl;
- 	        break;
- 	    case 4:
- 	        std::cout << "Ajouter un livre selectionner" << std::endl;
- 	        break;
- 	    case 5:
- 	        std::cout << "Ajouter un livre selectionner" << std::endl;
- 	        break;
- 	    case 6:
- 	        std::cout << "Ajouter un livre selectionner" << std::endl;
- 	        break;
- 	    }
+            break;
+        case 3:
+            std::cout << "Rechercher un livre." << std::endl;
+            // Appeler la fonction de recherche ici
+            break;
+        case 4:
+            std::cout << "Emprunter un livre." << std::endl;
+            // Appeler la fonction d'emprunt ici
+            break;
+        case 5:
+            std::cout << "Retourner un livre." << std::endl;
+            // Appeler la fonction de retour ici
+            break;
+        case 6:
+            std::cout << "Quitter l'application. A bientot !" << std::endl;
+            return 0;
+        }
     }
- }
+}
